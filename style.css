@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    background: linear-gradient(40deg, 
+    rgb(218, 23, 88), 60%, rgb(45, 118, 226));
+}
+
+.container {
+    padding: 26px;
+}
+
+nav.menyu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 6px;
+    position: relative;
+}
+
+nav.menyu > a {
+    background-color: orange;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20PX;
+    font-size: 20px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+}
+
+.banner { 
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.photodiv {
+    background-image: url(foto/photo_2021-04-07_21-51-01.jpg);
+    background-size: cover;
+    background-position: top;
+    border-radius: 10px;
+}
+
+.prisediv {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 30px;
+}
+
+.photodiv, .prisediv {
+    height: 650px;
+}
+
+.prisediv > div {
+    background-color: orange;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+h1 {
+    margin: 5px 0;
+    font-weight: 100;
+}
+
+.fourdivs {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 10px;
+    margin-bottom: 30px;
+}
+
+.fourdivs > div {
+    background-color: white;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.todayburger {
+    background-color: white;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    border-radius: 10px
+}
+
+.burger {
+    background-image: url(foto/fastfud1.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.articl {
+    margin-top: 60px;
+}
+
+button {
+    background-color: rgb(247, 185, 15);
+    padding: 8px;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.line > span {
+    height: 12px;
+}
+
+.linespan1 {
+    background: linear-gradient( to right, transparent, orange);
+    width: 43%;
+    position: absolute;
+    left: 0;
+    margin-top: 15px;
+}
+
+.linespan2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 6px;
+}
+
+.linespan3 {
+    background: linear-gradient( to right, orange, transparent);
+    width: 43%;
+    position: absolute;
+    right: 0;
+    margin-top: 15px;
+}
+
+.reklama {
+    margin-top: 30px;
+}
+
+.reklama > div {
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 16px;
+}
+
+.reklama > div > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.foto1 {
+    background-image: url(foto/fastfood2.jpg);
+}
+.foto2 {
+    background-image: url(foto/fast3.jpg);
+}
+.foto3 {
+    background-image: url(foto/fast4.jpg);
+}
+.foto4 {
+    background-image: url(foto/fast5.jpg);
+}
+.foto5 {
+    background-image: url(foto/fast6.jpg);
+} 
+
+nav.mobile{
+    display: none;
+    height: 50px;
+    background-color: orange;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.mobile svg {
+    width: 40px;
+    height: 40px;
+}
+
+.menu_list > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu_list li {
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu_list {
+    position: absolute;
+    right: 26px;
+    top: 94px;
+    background-color: orange;
+    border: 2px solid black;
+    display: none;
+}
+
+input[type=checkbox]:checked + div.menu_list{
+    display: block;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    nav.menyu {
+        display: none;
+    }
+    nav.mobile {
+        display: flex;
+    }
+}
+
